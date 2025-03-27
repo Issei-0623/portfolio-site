@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="./img/プレゼンテーションのアイコン.ico"
+      type="image/x-icon"
+    />
+    <title>issei-portfolio</title>
+    <meta
+      name="description"
+      content="齋藤壱成の自己紹介サイトです。持っている技術をすべて詰め込んでみましたので良かったら覗いてください！"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+      <!-- TOPコンテンツ -->
+    <section class="top">
+      <img
+        src="./img/桜島の写真.jpeg"
+        class="img-fluid top-image"
+        alt="ポートフォリオのトップ画像"
+      />
+      <div class="container">
+        <!-- ナビゲーションバー -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="nav-space">
+                <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#About"
+                      >About</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      >Job</a
+                    >
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#静電チャックの開発"
+                          >静電チャックの開発</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#私の業務">私の業務</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Self promotion
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#自己PR">自己PR</a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#Webエンジニアになるための取り組み"
+                          >Webエンジニアになるための取り組み</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="#Contact"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- タイトルとコメント等 -->
+        <h1 class="text-center display-3 fw-bold"><em>Issei Saito</em></h1>
+        <h2 class="text-center">
+          <em><u>My portfolio</u></em>
+        </h2>
+      </div>
+      <p
+        class="top-text text-center fw-bold"
+        style="position: absolute; bottom: 0; width: 100%"
+      >
+        鹿児島在住のエンジニア
+      </p>
+      <p
+        class="top-text text-end"
+        style="position: absolute; bottom: 0; width: 100%; text-align: right"
+      >
+        (写真)桜島
+      </p>
+    </section>
+
+    <!-- Aboutコンテンツ -->
+    <section id="About">
+      <div class="container py-5">
+        <h1 class="text-center fw-bold py-3 bg-dark text-white">About</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              src="./img/自分の写真.JPG"
+              alt="ポートフォリオのAbout写真"
+              class="about-img mx-auto d-block"
+              width="80%"
+              height="100%"
+            />
+          </div>
+          <div class="col-md-6 text-center">
+            <h2 class="py-4 display-6">- profile -</h2>
+            <div class="my-info">
+              <h3>齋藤 壱成 ( Issei Saito )</h3>
+              <p class="py-3">1996年6月23日生 東京都板橋区出身</p>
+            </div>
+            <div class="education text-start py-4">
+              <p>2015年 3月　　東京都立白鷗高等学校普通科 卒業</p>
+              <p>2015年 4月　　東邦大学理学部化学科 入学</p>
+              <p>2019年 3月　　東邦大学理学部化学科 卒業</p>
+              <p>2019年 4月　　埼玉大学大学院理工学研究科応用化学コース 入学</p>
+              <p>2021年 3月　　埼玉大学大学院理工学研究科応用化学コース 卒業</p>
+              <p>2021年 4月　　京セラ株式会社 入社</p>
+            </div>
+            <div class="hobbies text-start">
+              <p>
+                学生時代はサッカーと化学が好きでした。<br />社会人になっても無機化学材料（セラミックス）を使って世の中に役に立つ製品を開発しております
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jobコンテンツ -->
+    <section id="Job">
+      <div class="container py-5">
+        <h1 class="text-center fw-bold py-3 bg-dark text-white">Job</h1>
+        <h2 class="text-center py-4" id="静電チャックの開発">
+          静電チャックの開発
+        </h2>
+        <div class="row d-flex align-items-center">
+          <div class="col-md-6">
+            <img
+              class="img-fluid rounded"
+              src="./img/静電チャック模式図.jpg"
+              alt="静電チャック模式図"
+            />
+          </div>
+          <div class="col-md-6">
+            <p class="lh-lg">
+              電子機器にはICチップが含まれており、これは半導体であるSiウエハを化学反応または加工など様々な工程を経て作られます。
+              <br />静電チャックは、これらの工程でウエハを静電気の力で吸着・固定する装置です。
+              <br />物理的な接触が不要なため、ウエハを傷つけることなく半導体を作ることができます。
+            </p>
+          </div>
+        </div>
+        <h2 class="text-center py-2" id="私の業務">私の業務</h2>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img
+              class="img-fluid w-80 h-auto rounded"
+              src="./img/静電チャック前工程.jpg"
+              alt="セラミックスの作製手順"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="lh-lg">
+              静電チャックの特性を決めるセラミックスの作製（前工程）を行っております。
+              <br />多層電極構造の実現や工程改善によるコスト削減、事業部初の還元焼成やロウ付け技術などで開発品を出荷して事業部の欠かせない技術に携わっています
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Self promotionコンテンツ -->
+    <section class="Self_promotion">
+      <div class="container py-5">
+        <h1 class="text-center fw-bold py-3 bg-dark text-white">
+          Self promotion
+        </h1>
+        <!-- 自己PR -->
+        <h2 class="text-center py-4" id="自己PR">自己PR</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="./img/問題解決.jpg"
+                class="card-img-top img-thumbnail"
+                alt="問題解決能力"
+              />
+              <div class="card-body">
+                <h3 class="card-title fw-bold text-center">問題解決力</h3>
+                <p class="card-text">
+                  開発業務を通じて、まずは何が問題なのかよく観察するようにしています。
+                  <br />次に得られた情報から原因を推測し、可能性の高い仮説から潰すように意識しております。
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <h6 class="fw-bold">焼成工程の生産性向上</h6>
+                  <p>
+                    焼成台板の導入により約500万円/年の経費削減と投入枚数の増加
+                  </p>
+                </li>
+                <li class="list-group-item">
+                  <h6 class="fw-bold">加工工程の効率化</h6>
+                  <p>
+                    要求される寸法から加工指示書の作成と工程改善によるタクトタイム短縮
+                  </p>
+                </li>
+                <li class="list-group-item">
+                  <h6 class="fw-bold">端子ロウ付け技術の仕様化</h6>
+                  <p>
+                    文献や試験を元にロウ付け技術を仕様化し、様々な開発品に展開
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="./img/連携.jpg"
+                class="card-img-top img-thumbnail"
+                alt="連携力"
+              />
+              <div class="card-body">
+                <h3 class="card-title fw-bold text-center">他者との連携力</h3>
+                <p class="card-text">
+                  相手の業務や人柄を理解することで、信頼関係を築くことを心がけています。
+                  <br />その信頼関係を基に、効果的なコミュニケーションと協力が可能になります。
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <h6 class="fw-bold">工程流動</h6>
+                  <p>
+                    製品を流動する上で製造と密な連携が必要であり、製造と連携して納期内に出荷
+                  </p>
+                </li>
+                <li class="list-group-item">
+                  <h6 class="fw-bold">上司へのサポート</h6>
+                  <p>
+                    上司が手に回らない業務を先読みしてサポートすることで円滑に業務を進める
+                  </p>
+                </li>
+                <li class="list-group-item">
+                  <h6 class="fw-bold">雑談力</h6>
+                  <p>
+                    年代を問わず、日頃からコミュニケーションを大切にしています
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-center py-5" id="Webエンジニアになるための取り組み">
+          Webエンジニアになるための取り組み
+        </h2>
+        <!-- 勉強成果物コンテンツ -->
+        <div class="card text-center">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#progate-content"
+                >
+                  Progate
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#daytra-content"
+                >
+                  デイトラ
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- タブコンテンツ -->
+          <div class="card-body tab-content">
+            <!-- Progate学習内容 -->
+            <div id="progate-content" class="tab-pane active">
+              <h5 class="card-title fw-bold">Progate学習</h5>
+              <p class="card-text">学習期間(2024年8月〜2024年12月)</p>
+              <a href="">
+                <img
+                  src="./img/Progate成果.jpg"
+                  alt="Progate成果記録"
+                  class="progate-img img-fluid mx-auto d-block py-3"
+                  style="max-width: 100%; height: auto"
+                />
+              </a>
+              <h5 class="card-text fw-bold py-3">独学で基礎固め</h5>
+              <p>
+                Progateというオンラインプログラミング学習サービスを活用し、HTML、CSS、JavaScript、jQuery、PHP、Ruby、Ruby
+                on Rails、SQL、Sass、Git、Command
+                Line、Node.jsなど幅広い言語やツールに触れました。総演習クリア数は620に達し、Web言語やツールの基礎を幅広く学びました。
+              </p>
+            </div>
+
+            <!-- デイトラ学習内容 -->
+            <div id="daytra-content" class="tab-pane">
+              <h5 class="card-title fw-bold">デイトラ学習</h5>
+              <p class="card-text">学習期間(2025年1月〜)</p>
+              <div
+                id="carouselExampleDark"
+                class="carousel carousel-dark slide"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <a href="https://dairytrailisseisweetsite-practice.vercel.app/" target="_blank">
+                      <img
+                        src="./img/Cafe LP制作.jpg"
+                        alt="カフェLP制作"
+                        class="dairytrail-img img-fluid mx-auto d-block py-3"
+                        style="max-width: 100%; height: auto"
+                      />
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>カフェLP制作</h5>
+                      <p>
+                        HTML,CSS,JavaScript（jQuery）を使用して簡単なサイトを構築
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <a href="https://dairytrail-issei-bootstrap-practice.vercel.app/" target="_blank">
+                      <img
+                        src="./img/bootstrapサイト.jpg"
+                        alt="Bootstrapサイト"
+                        class="dairytrail-img img-fluid mx-auto d-block py-3"
+                        style="max-width: 100%; height: auto"
+                      />
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Bootstrapサイト</h5>
+                      <p>
+                        CSSのフレームワークであるBootstrapを使用して簡単なサイトを構築
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="">
+                      <img
+                        src="./img/QRコード仮.webp"
+                        alt="◯◯アプリ"
+                        class="dairytrail-img img-fluid mx-auto d-block py-3"
+                        style="max-width: 100%; height: auto"
+                      />
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>〇〇アプリ</h5>
+                      <p>
+                        RubyのフレームワークであるRuby on
+                        railsを使用して〇〇アプリを開発
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <h5 class="card-text fw-bold py-3">実践的なスキル習得</h5>
+              <p>
+                デイトラのWeb開発コースを受講し、より実践的なスキルを習得中です。初級編では、HTML、CSS、Bootstrapを使用してWebサイトを作成し、JavaScriptやjQueryで動的な要素を追加しました。現在は中級編で、GitHub、Sourcetree、Wrapを使用し、RubyとRuby
+                on Railsでのウェブサイト開発やアプリケーション開発に挑戦しています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 連絡先 -->
+    <section class="contact" id="Contact">
+      <div class="container py-5">
+        <h1 class="text-center fw-bold py-3 bg-dark text-white">Contact</h1>
+        <h2 class="text-center py-4">連絡先</h2>
+        <ul class="contact-nav-list">
+          <li class="contact-nav-item">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=proteinebimayoduu@gmail.com"
+              class="contact-nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="sns-icon"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <p class="contact-nav-link-text display-">
+                Gmail : proteinebimayoduu@gmail.com
+              </p>
+            </a>
+          </li>
+          <li class="contact-nav-item">
+            <a
+              href="https://line.me/ti/p/~nesta-0623"
+              class="contact-nav-link"
+              target="_blank"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="sns-icon"
+              >
+                <path
+                  d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.348 0 .63.285.63.63 0 .349-.282.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"
+                ></path>
+              </svg>
+              <p class="contact-nav-link-text">Line ID : nesta-0623</p>
+            </a>
+          </li>
+          <li class="contact-nav-item">
+            <a href="tel:090-4949-2646" class="contact-nav-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="sns-icon"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
+              </svg>
+              <p class="contact-nav-link-text">Tel : 090-4949-2646</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer border-top border-secondary text-center p-1">
+      <div class="footer-copy-wrapper">
+        <small class="footer-copylight">&copy;Issei Saito</small>
+      </div>
+    </section>
+
+    <!-- TOPボタン -->
+    <p id="page-top"><a href="#wrap">TOP</a></p>
+
+    <!-- メニューの拡大画像 -->
+    <div class="progate-modal">
+      <img src="./img/Progate成果.jpg" alt="" class="progate-bigimg" />
+    </div>
+
+    <!-- javaScript導入 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous">
+    </script>
+<script>
+  let attempts = 0;
+  const correctPassword = "a"; // ここに正しいパスワードを設定
+
+  while (attempts < 3) {
+    const password = prompt("パスワードを入力してください");
+    if (password === correctPassword) {
+      alert("ログイン成功！");
+      break; // 正しい場合はループを抜ける
+    } else {
+      attempts++;
+      if (attempts === 3) {
+        document.body.innerHTML = "<h1>パスワードが違います。閲覧できません。</h1>";
+      }
+    }
+  }
+
+  if (attempts === 3) {
+    setTimeout(() => {
+      window.location.href = "https://www.google.com/"; // ロック後のリダイレクト先
+    }, 5000); // 3秒後にリダイレクト
+  }
+</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
