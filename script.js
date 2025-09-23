@@ -24,7 +24,7 @@ $(function () {
 
 //モーダルで画像の拡大表示
 $(".progate-img").click(function () {
-  var imgSrc = $(this).find("img").attr("src");
+  var imgSrc = $(this).attr("src");
   $(".progate-bigimg").attr("src", imgSrc);
   $(".progate-modal").fadeIn();
   $("body").css("overflow", "hidden");
