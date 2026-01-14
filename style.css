@@ -71,6 +71,10 @@
   width: 100%;
 }
 
+.accordion-body li{
+  text-align: left;
+}
+
 /* Aboutコンテンツ */
 .about-img {
   object-fit: contain;
