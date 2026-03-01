@@ -652,42 +652,6 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous">
     </script>
-<script>
-  let attempts = 0;
-  const correctPassword = "pw0623";
-
-  function askPassword() {
-    const password = prompt("パスワードを入力してください");
-
-    // キャンセル・ブロック対策
-    if (password === null) {
-      alert("パスワード入力が必要です");
-      askPassword();
-      return;
-    }
-
-    if (password === correctPassword) {
-      alert("ログイン成功！");
-      return;
-    }
-
-    attempts++;
-
-    if (attempts >= 3) {
-      document.body.innerHTML = "<h1>パスワードが違います。閲覧できません。</h1>";
-      setTimeout(() => {
-        location.href = "https://www.google.com/";
-      }, 5000);
-      return;
-    }
-
-    // 再挑戦
-    askPassword();
-  }
-
-  askPassword();
-
-</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./script.js"></script>
   </body>
