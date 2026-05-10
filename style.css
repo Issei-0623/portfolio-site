@@ -1,188 +1,786 @@
-/* Topコンテンツ */
-.top {
-  position: relative;
-  height: 40vh;
+/* ============================================================
+   Variables
+============================================================ */
+:root {
+  --primary:       #2563EB;
+  --primary-dark:  #1D4ED8;
+  --primary-light: #EFF6FF;
+  --text-dark:     #0F172A;
+  --text-mid:      #475569;
+  --text-light:    #94A3B8;
+  --bg-white:      #FFFFFF;
+  --bg-section:    #F8FAFC;
+  --border:        #E2E8F0;
+  --shadow:        0 4px 24px rgba(0, 0, 0, 0.08);
+  --radius:        12px;
 }
 
-.top h1,
-.top h2,
-.top p {
-  color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
-    1px 1px 0 white;
+/* ============================================================
+   Base
+============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans JP', 'Inter', sans-serif;
+  color: var(--text-dark);
+  background: var(--bg-white);
+  line-height: 1.75;
+  padding-top: 68px;
 }
 
-.top-image {
-  width: 100%;
-  height: 100%;
-  object-position: top;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
+img { display: block; }
 
-.top .container {
-  position: relative;
-  z-index: 1;
-}
-
-.navbar {
+/* ============================================================
+   Navbar
+============================================================ */
+#mainNav {
   position: fixed;
-  width: 100%;
   top: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: transparent !important;
-}
-
-.nav-space {
-  background-color: rgb(0, 0, 0);
-  opacity: 70%;
-  border-radius: 5px;
-}
-
-.navbar-nav {
-  justify-content: flex-end;
-}
-
-.dropdown-menu {
-  background-color: rgb(0, 0, 0);
-}
-
-.dropdown-item {
-  color: rgb(255, 255, 255) !important;
-}
-
-.dropdown-item:hover {
-  background-color: blue;
-}
-
-.navbar .navbar-nav .nav-link {
-  color: rgb(255, 255, 255) !important;
-}
-
-.navbar .navbar-nav .nav-link.active {
-  color: rgb(255, 255, 255) !important;
-}
-
-.bottom-text {
-  bottom: 0;
   width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+  transition: box-shadow 0.3s;
 }
 
-.accordion-body li{
-  text-align: left;
+#mainNav.scrolled {
+  box-shadow: var(--shadow);
 }
 
-/* Aboutコンテンツ */
-.about-img {
-  object-fit: contain;
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary) !important;
+  letter-spacing: 3px;
 }
 
-.text-center {
-  font-family: serif;
+#mainNav .nav-link {
+  color: var(--text-mid) !important;
+  font-weight: 500;
+  padding: 6px 18px !important;
+  transition: color 0.2s;
 }
 
-/* Contactコンテンツ */
-.contact-nav-link {
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active {
+  color: var(--primary) !important;
+}
+
+/* ============================================================
+   Hero
+============================================================ */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.05);
+  transition: transform 10s ease;
+}
+
+.hero-section:hover .hero-bg {
+  transform: scale(1);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.50) 50%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 16px;
+}
+
+.hero-sub {
+  font-size: 0.85rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-btn {
+  font-size: 0.9rem;
+  padding: 10px 28px;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hero-btn:hover {
+  background: white;
+  color: var(--text-dark) !important;
+}
+
+.hero-photo-credit {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.72rem;
+  z-index: 2;
+  margin: 0;
+}
+
+/* ============================================================
+   Section Common
+============================================================ */
+.section-padding { padding: 96px 0; }
+
+.bg-section { background-color: var(--bg-section) !important; }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--text-dark);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 14px;
+  margin-bottom: 0;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-top: 14px;
+  letter-spacing: 3px;
+}
+
+/* ============================================================
+   About
+============================================================ */
+.about-photo {
+  width: 100%;
+  max-width: 380px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.about-name h3 {
+  font-size: 1.75rem;
+  margin-bottom: 4px;
+}
+
+.text-muted-sm {
+  color: var(--text-light);
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.timeline {
+  border-left: 2px solid var(--border);
+  padding-left: 28px;
+  margin: 8px 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 4px;
+}
+
+.timeline-item p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  margin: 0;
+}
+
+/* ============================================================
+   Job
+============================================================ */
+.job-wide-img {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ============================================================
+   PR Cards
+============================================================ */
+.pr-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 100%;
+  background: var(--bg-white);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.pr-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.pr-card-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.pr-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.pr-card:hover .pr-card-img img {
+  transform: scale(1.04);
+}
+
+.pr-card-body { padding: 24px; }
+
+.pr-card-title {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.pr-list {
+  padding-left: 18px;
+  margin-top: 12px;
+}
+
+.pr-list li {
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  margin-bottom: 8px;
+}
+
+/* ============================================================
+   Tabs
+============================================================ */
+.nav-tabs { border-bottom: 1px solid var(--border); }
+
+.nav-tabs .nav-link {
+  color: var(--text-mid) !important;
+  border: none !important;
+  border-bottom: 2px solid transparent !important;
+  border-radius: 0 !important;
+  padding: 10px 24px !important;
+  font-weight: 500;
+  background: transparent !important;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--primary) !important;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary) !important;
+  border-bottom-color: var(--primary) !important;
+}
+
+/* ============================================================
+   Stat Badge (Progate)
+============================================================ */
+.stat-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--primary-light);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 20px 40px;
+  margin-top: 24px;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  margin-top: 6px;
+}
+
+/* ============================================================
+   デイトラ スキルタグ
+============================================================ */
+.daytra-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ============================================================
+   デイトラ Work Cards
+============================================================ */
+.works-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.work-card-sm {
+  flex: 1;
+  min-width: 180px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
   text-decoration: none;
+  color: inherit;
+  background: var(--bg-white);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.work-card-sm:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
   color: inherit;
 }
 
-.contact li {
-  list-style: none;
+.work-card-sm img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: top;
 }
 
-.contact li:hover {
+.work-card-sm img.img-contain {
+  object-fit: contain;
+  background: #f1f3f5;
+}
+
+.work-card-sm-body { padding: 14px; }
+
+.work-card-sm-body h6 {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+.work-card-sm-body p {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* ============================================================
+   Photogram（デイトラ最終課題）
+============================================================ */
+.daytra-final-label {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px 20px 0 0;
+  letter-spacing: 1px;
+}
+
+.photogram-card {
+  display: flex;
+  gap: 0;
+  border: 2px solid var(--primary);
+  border-radius: 0 var(--radius) var(--radius) var(--radius);
+  overflow: hidden;
+  background: var(--bg-white);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.photogram-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+}
+
+.photogram-gallery {
+  width: 300px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background: #111;
+}
+
+.photogram-gallery-main {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photogram-gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.photogram-gallery-thumbs {
+  display: flex;
+  gap: 4px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.photogram-gallery-thumbs::-webkit-scrollbar { display: none; }
+
+.photogram-thumb {
+  height: 52px;
+  width: auto;
+  border-radius: 5px;
+  cursor: pointer;
   opacity: 0.5;
-  color: brown;
-}
-
-.sns-icon {
-  margin-right: 10px;
-}
-
-/* TOPボタン */
-#page-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 100%;
-  font-weight: bold;
-}
-#page-top a {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 15px 15px;
-  text-align: center;
+  border: 2px solid transparent;
+  flex-shrink: 0;
+  transition: opacity 0.2s, border-color 0.2s;
   display: block;
-  border-radius: 20%;
-  text-decoration: none;
-}
-#page-top a:hover {
-  text-decoration: none;
-  background: #999;
 }
 
-/* モーダルで画像の拡大表示 */
-.progate-modal {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
+.photogram-thumb:hover { opacity: 0.85; }
+
+.photogram-thumb.active {
+  opacity: 1;
+  border-color: #facc15;
+}
+
+.photogram-card-body {
+  padding: 28px;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .photogram-card {
+    flex-direction: column;
+  }
+
+  .photogram-gallery {
     width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
+    min-width: unset;
+    height: 320px;
   }
-  
-  .progate-bigimg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 90%;
-    height: 90%;
-    margin: auto;
-    display: block;
-    object-fit: contain;
-  }
-  
-  .progate-img:hover {
-    opacity: 0.7;
-    cursor: pointer;
+}
+
+/* ============================================================
+   個人開発 Project Cards
+============================================================ */
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 100%;
+  background: var(--bg-white);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.project-card-header {
+  background: var(--primary);
+  padding: 20px 24px;
+}
+
+.project-card-header h4 {
+  color: white;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.project-card-body { padding: 24px; }
+
+.project-card-body > p {
+  color: var(--text-mid);
+  font-size: 0.9rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tech-tag {
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.feature-list {
+  padding-left: 18px;
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  margin: 0;
+}
+
+.feature-list li { margin-bottom: 4px; }
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-project {
+  display: inline-block;
+  background: var(--primary);
+  color: white !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-project:hover { background: var(--primary-dark); }
+
+.btn-project-outline {
+  display: inline-block;
+  border: 1.5px solid var(--primary);
+  color: var(--primary) !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-project-outline:hover {
+  background: var(--primary);
+  color: white !important;
+}
+
+/* ============================================================
+   Contact
+============================================================ */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-mid);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 18px 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: white;
+  width: 100%;
+  max-width: 480px;
+  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.contact-link:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+/* ============================================================
+   Footer
+============================================================ */
+.site-footer {
+  background: var(--text-dark);
+  color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  padding: 24px;
+  font-size: 0.82rem;
+}
+
+.site-footer p { margin: 0; }
+
+/* ============================================================
+   Back to Top
+============================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 46px;
+  height: 46px;
+  background: var(--primary);
+  color: white !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 999;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   Responsive
+============================================================ */
+
+/* タブレット以下 */
+@media (max-width: 991px) {
+  .hero-title { font-size: clamp(2.5rem, 7vw, 4rem); }
+
+  .nav-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
 
-/* スマホの表示 */
-/* スマホの表示 */
-@media screen and (max-width: 768px) {
-    .top {
-      position: relative;
-      height: 15vh;
-    }
-  
-    .top-image {
-      height: 100%;
-      object-position: top;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-  
-    .top h1 {
-      font-size: 1.5rem;
-    }
+  .nav-tabs::-webkit-scrollbar { display: none; }
 
-    .top h2 {
-      font-size: 1rem;
-    }
-
-    .top p {
-      font-size: 0.8rem;
-    }
+  .nav-tabs .nav-link {
+    white-space: nowrap;
+    padding: 10px 16px !important;
   }
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+  body { padding-top: 60px; }
+
+  .section-padding { padding: 56px 0; }
+
+  .section-title { font-size: 1.6rem; }
+
+  .hero-sub { font-size: 0.75rem; letter-spacing: 3px; }
+
+  .hero-desc { font-size: 0.95rem; }
+
+  .hero-btn { padding: 8px 22px; font-size: 0.85rem; }
+
+  .about-photo { max-width: 240px; }
+
+  .about-name h3 { font-size: 1.4rem; }
+
+  .works-row { flex-direction: column; }
+
+  .work-card-sm { min-width: unset; }
+
+  .project-links { flex-direction: column; }
+
+  .contact-link {
+    padding: 14px 16px;
+    font-size: 0.875rem;
+  }
+
+  .stat-badge { padding: 16px 28px; }
+
+  .stat-number { font-size: 2.8rem; }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* 小さいスマホ */
+@media (max-width: 480px) {
+  .hero-title { font-size: 2.2rem; letter-spacing: 2px; }
+
+  .section-padding { padding: 48px 0; }
+
+  .pr-card-img { height: 160px; }
+
+  .photogram-card-body { padding: 20px; }
+
+  .daytra-final-label { font-size: 0.7rem; }
+}

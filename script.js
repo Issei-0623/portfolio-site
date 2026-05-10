@@ -1,37 +1,40 @@
-// スクロールしたらTOPボタン出現
-$(function () {
-  var topBtn = $("#page-top");
-  topBtn.hide();
-  //スクロールが100に達したらボタン表示
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      topBtn.fadeIn(500);
-    } else {
-      topBtn.fadeOut(500);
+// Photogram ギャラリー切り替え
+const photogramMain = document.getElementById('photogramMain');
+document.querySelectorAll('.photogram-thumb').forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    photogramMain.src = thumb.src;
+    photogramMain.alt = thumb.alt;
+    document.querySelectorAll('.photogram-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  });
+});
+
+const mainNav = document.getElementById('mainNav');
+const backToTop = document.getElementById('backToTop');
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('#mainNav .nav-link');
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+
+  // ナビの影
+  mainNav.classList.toggle('scrolled', scrollY > 60);
+
+  // トップへ戻るボタン
+  backToTop.classList.toggle('visible', scrollY > 300);
+
+  // アクティブなナビリンクをハイライト
+  let current = '';
+  sections.forEach(section => {
+    if (scrollY >= section.offsetTop - 100) {
+      current = section.getAttribute('id');
     }
   });
-  //TOPボタンをクリックしてトップに移動
-  topBtn.click(function () {
-    $("body,html").animate(
-      {
-        scrollTop: 0,
-      },
-      500
-    );
-    return false;
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
   });
-});
-
-//モーダルで画像の拡大表示
-$(".progate-img").click(function () {
-  var imgSrc = $(this).attr("src");
-  $(".progate-bigimg").attr("src", imgSrc);
-  $(".progate-modal").fadeIn();
-  $("body").css("overflow", "hidden");
-  return false;
-});
-
-$(".progate-modal").click(function () {
-  $(this).fadeOut();
-  $("body").css("overflow", "auto");
 });

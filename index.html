@@ -3,656 +3,410 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="shortcut icon"
-      href="./img/プレゼンテーションのアイコン.ico"
-      type="image/x-icon"
-    />
-    <title>issei-portfolio</title>
-    <meta
-      name="description"
-      content="齋藤壱成の自己紹介サイトです。持っている技術をすべて詰め込んでみましたので良かったら覗いてください！"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
+    <link rel="shortcut icon" href="./img/プレゼンテーションのアイコン.ico" type="image/x-icon" />
+    <title>Issei Saito | Portfolio</title>
+    <meta name="description" content="齋藤壱成の自己紹介サイトです。持っている技術をすべて詰め込んでみましたので良かったら覗いてください！" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-      <!-- TOPコンテンツ -->
-    <section class="top">
-      <img
-        src="./img/桜島の写真.jpeg"
-        class="img-fluid top-image"
-        alt="ポートフォリオのトップ画像"
-      />
+
+    <!-- ナビゲーション -->
+    <nav class="navbar navbar-expand-lg" id="mainNav">
       <div class="container">
-        <!-- ナビゲーションバー -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div class="nav-space">
-                <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#About"
-                      >About</a
-                    >
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      >Job</a
-                    >
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="#静電チャックの開発"
-                          >静電チャックの開発</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#私の業務">私の業務</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Self promotion
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="#自己PR">自己PR</a>
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="#Webエンジニアになるための取り組み"
-                          >Webエンジニアになるための取り組み</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link active"
-                      aria-current="page"
-                      href="#Contact"
-                      >Contact</a
-                    >
-                  </li>
+        <a class="navbar-brand" href="#hero">IS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="メニューを開く">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#job">Job</a></li>
+            <li class="nav-item"><a class="nav-link" href="#promotion">Self Promotion</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ヒーロー -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg" style="background-image: url('./img/桜島の写真.jpeg');"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content text-center text-white">
+        <p class="hero-sub">Web Engineer Portfolio</p>
+        <h1 class="hero-title">Issei Saito</h1>
+        <p class="hero-desc">鹿児島在住 / 化学系エンジニアから Web エンジニアへ</p>
+        <a href="#about" class="btn btn-outline-light mt-3 hero-btn">View More ↓</a>
+      </div>
+      <p class="hero-photo-credit">Photo: 桜島</p>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About</h2>
+          <p class="section-subtitle">自己紹介</p>
+        </div>
+        <div class="row align-items-center g-5">
+          <div class="col-md-5 text-center">
+            <img src="./img/自分の写真.JPG" alt="齋藤壱成の写真" class="about-photo" />
+          </div>
+          <div class="col-md-7">
+            <div class="about-name mb-4">
+              <h3>齋藤 壱成</h3>
+              <p class="text-muted-sm">Issei Saito</p>
+            </div>
+            <p class="mb-4">1996年6月23日生・東京都板橋区出身</p>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-year">2015</span>
+                <p>東京都立白鷗高等学校普通科 卒業</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2015</span>
+                <p>東邦大学理学部化学科 入学</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2019</span>
+                <p>東邦大学理学部化学科 卒業 → 埼玉大学大学院理工学研究科応用化学コース 入学</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2021</span>
+                <p>埼玉大学大学院 卒業 → 京セラ株式会社 入社</p>
+              </div>
+            </div>
+            <p class="mt-4">学生時代はサッカーと化学が好きで、社会人になっても無機化学材料（セラミックス）を使って世の中に役立つ製品を開発しています。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Job -->
+    <section id="job" class="section-padding bg-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Job</h2>
+          <p class="section-subtitle">現在の仕事</p>
+        </div>
+        <div class="row align-items-center g-5 mb-5">
+          <div class="col-md-6">
+            <img class="img-fluid rounded-3 shadow-sm" src="./img/静電チャック模式図.jpg" alt="静電チャック模式図" />
+          </div>
+          <div class="col-md-6">
+            <h3 class="mb-3">静電チャックの開発</h3>
+            <p class="text-body-secondary lh-lg">
+              電子機器のICチップは半導体（Siウエハ）を様々な工程で加工して作られます。
+              静電チャックはこれらの工程でウエハを静電気の力で吸着・固定する装置です。
+              物理的な接触が不要なため、ウエハを傷つけることなく半導体を製造できます。
+            </p>
+          </div>
+        </div>
+        <div class="row align-items-center g-4">
+          <div class="col-md-12 text-center">
+            <img class="img-fluid rounded-3 shadow-sm job-wide-img" src="./img/静電チャック前工程.png" alt="セラミックスの作製手順" />
+          </div>
+          <div class="col-md-12">
+            <h3 class="mb-3">私の業務</h3>
+            <p class="text-body-secondary lh-lg">
+              静電チャックの特性を決めるセラミックスの作製（前工程）を担当しています。
+              多層電極構造の実現や工程改善によるコスト削減、事業部初の還元焼成や端子のロウ付け技術などで
+              開発品を出荷し、事業部に欠かせない技術に携わっています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Self Promotion -->
+    <section id="promotion" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Self Promotion</h2>
+          <p class="section-subtitle">自己PR</p>
+        </div>
+
+        <!-- PR カード -->
+        <div class="row g-4 mb-5">
+          <div class="col-md-6">
+            <div class="pr-card">
+              <div class="pr-card-img">
+                <img src="./img/問題解決.jpg" alt="課題解決力" />
+              </div>
+              <div class="pr-card-body">
+                <h3 class="pr-card-title">課題解決力</h3>
+                <p>業務課題を観察・分解し、データに基づく仮説検証で最適解を導き出すことを心がけています。工程改善を通じてリードタイム短縮や品質安定化を実現してきました。</p>
+                <ul class="pr-list">
+                  <li><strong>焼成工程の生産性向上</strong>：スリット入り焼成台板の導入で約500万円/年の経費削減</li>
+                  <li><strong>磁器加工手順の最適化</strong>：データ分析と仮説検証で磁器反りを安定化</li>
+                  <li><strong>端子ロウ付け技術の仕様化</strong>：文献や試験をもとにロウ付け技術を部署内で仕様化し展開</li>
                 </ul>
               </div>
             </div>
           </div>
-        </nav>
-        <!-- タイトルとコメント等 -->
-        <h1 class="text-center display-3 fw-bold"><em>Issei Saito</em></h1>
-        <h2 class="text-center">
-          <em><u>My portfolio</u></em>
-        </h2>
-      </div>
-      <p
-        class="top-text text-center fw-bold"
-        style="position: absolute; bottom: 0; width: 100%"
-      >
-        鹿児島在住のエンジニア
-      </p>
-      <p
-        class="top-text text-end"
-        style="position: absolute; bottom: 0; width: 100%; text-align: right"
-      >
-        (写真)桜島
-      </p>
-    </section>
-
-    <!-- Aboutコンテンツ -->
-    <section id="About">
-      <div class="container py-5">
-        <h1 class="text-center fw-bold py-3 bg-dark text-white">About</h1>
-        <div class="row">
           <div class="col-md-6">
-            <img
-              src="./img/自分の写真.JPG"
-              alt="ポートフォリオのAbout写真"
-              class="about-img mx-auto d-block"
-              width="80%"
-              height="100%"
-            />
-          </div>
-          <div class="col-md-6 text-center">
-            <h2 class="py-4 display-6">- profile -</h2>
-            <div class="my-info">
-              <h3>齋藤 壱成 ( Issei Saito )</h3>
-              <p class="py-3">1996年6月23日生 東京都板橋区出身</p>
-            </div>
-            <div class="education text-start py-4">
-              <p>2015年 3月   東京都立白鷗高等学校普通科 卒業</p>
-              <p>2015年 4月   東邦大学理学部化学科 入学</p>
-              <p>2019年 3月   東邦大学理学部化学科 卒業</p>
-              <p>2019年 4月   埼玉大学大学院理工学研究科応用化学コース 入学</p>
-              <p>2021年 3月   埼玉大学大学院理工学研究科応用化学コース 卒業</p>
-              <p>2021年 4月   京セラ株式会社 入社</p>
-            </div>
-            <div class="hobbies text-start">
-              <p>
-                学生時代はサッカーと化学が好きでした。<br />社会人になっても無機化学材料（セラミックス）を使って世の中に役に立つ製品を開発しております
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Jobコンテンツ -->
-    <section id="Job">
-      <div class="container py-5">
-        <h1 class="text-center fw-bold py-3 bg-dark text-white">Job</h1>
-        <h2 class="text-center py-4" id="静電チャックの開発">
-          静電チャックの開発
-        </h2>
-        <div class="row d-flex align-items-center">
-          <div class="col-md-6">
-            <img
-              class="img-fluid rounded"
-              src="./img/静電チャック模式図.jpg"
-              alt="静電チャック模式図"
-            />
-          </div>
-          <div class="col-md-6">
-            <p class="lh-lg">
-              電子機器にはICチップが含まれており、これは半導体であるSiウエハを化学反応または加工など様々な工程を経て作られます。
-              <br />静電チャックは、これらの工程でウエハを静電気の力で吸着・固定する装置です。
-              <br />物理的な接触が不要なため、ウエハを傷つけることなく半導体を作ることができます。
-            </p>
-          </div>
-        </div>
-        <h2 class="text-center py-2" id="私の業務">私の業務</h2>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <img
-              class="img-fluid w-80 h-auto rounded"
-              src="./img/静電チャック前工程.jpg"
-              alt="セラミックスの作製手順"
-            />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <p class="lh-lg">
-              静電チャックの特性を決めるセラミックスの作製（前工程）を行っております。
-              <br />多層電極構造の実現や工程改善によるコスト削減、事業部初の還元焼成やロウ付け技術などで開発品を出荷して事業部の欠かせない技術に携わっています
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Self promotionコンテンツ -->
-    <section class="Self_promotion">
-      <div class="container py-5">
-        <h1 class="text-center fw-bold py-3 bg-dark text-white">
-          Self promotion
-        </h1>
-        <!-- 自己PR -->
-        <h2 class="text-center py-4" id="自己PR">自己PR</h2>
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-          <div class="col">
-            <div class="card h-100">
-              <img
-                src="./img/問題解決.jpg"
-                class="card-img-top img-thumbnail"
-                alt="問題解決能力"
-              />
-              <div class="card-body">
-                <h3 class="card-title fw-bold text-center">課題解決力</h3>
-                <p class="card-text">
-                  業務課題を観察・分解し、データに基づく仮説検証で最適解を導き出すことを心がけています。
-                  <br />工程改善を通じてリードタイム短縮や品質安定化を実現してきました。
-                </p>
+            <div class="pr-card">
+              <div class="pr-card-img">
+                <img src="./img/連携.jpg" alt="連携力" />
               </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <h6 class="fw-bold">焼成工程の生産性向上</h6>
-                  <p>
-                    スリット入り焼成台板の導入により約500万円/年の経費削減
-                  </p>
-                </li>
-                <li class="list-group-item">
-                  <h6 class="fw-bold">磁器加工手順の最適化</h6>
-                  <p>
-                    データ分析と仮説検証で磁器反りの安定化
-                  </p>
-                </li>
-                <li class="list-group-item">
-                  <h6 class="fw-bold">端子ロウ付け技術の仕様化</h6>
-                  <p>
-                    文献や試験を元にロウ付け技術を部署内で仕様化し、様々な開発品に展開
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img
-                src="./img/連携.jpg"
-                class="card-img-top img-thumbnail"
-                alt="連携力"
-              />
-              <div class="card-body">
-                <h3 class="card-title fw-bold text-center">他者との連携力</h3>
-                <p class="card-text">
-                  相手の事情を理解し、背景や効果を共有することで信頼を築き、協働を円滑に進めてきました。
-                  <br />製造部門や外注業者と協力し、試作流動をスムーズに進める体制を構築しました。
-                </p>
+              <div class="pr-card-body">
+                <h3 class="pr-card-title">他者との連携力</h3>
+                <p>相手の事情を理解し、背景や効果を共有することで信頼を築き、協働を円滑に進めてきました。製造部門や外注業者と協力し、試作流動をスムーズに進める体制を構築しました。</p>
+                <ul class="pr-list">
+                  <li><strong>工程流動の推進</strong>：製造と密に調整し、試作を滞りなく出荷</li>
+                  <li><strong>交渉と調整</strong>：相手の業務事情を理解したうえで優先対応を実現</li>
+                  <li><strong>先読み行動</strong>：次工程を見据えて製造現場へ事前伝達</li>
+                </ul>
               </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <h6 class="fw-bold">工程流動の推進</h6>
-                  <p>
-                    製造と密に調整し、試作を滞りなく出荷
-                  </p>
-                </li>
-                <li class="list-group-item">
-                  <h6 class="fw-bold">交渉と調整</h6>
-                  <p>
-                    相手の業務事情を理解したうえで開発品の背景や費用帯効果を伝え、互いに納得できる形で優先対応を実現
-                  </p>
-                </li>
-                <li class="list-group-item">
-                  <h6 class="fw-bold">先読み行動</h6>
-                  <p>
-                    次工程を見据えて製造現場へ事前伝達
-                  </p>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
 
-        <section>
-          <h2 class="text-center py-5" id="Webエンジニアになるための取り組み">
-            Webエンジニアになるための取り組み
-          </h2>
+        <!-- Webエンジニアへの取り組み -->
+        <div class="section-header mt-5">
+          <h3 class="section-title fs-3">Webエンジニアになるための取り組み</h3>
+        </div>
 
-          <div class="card text-center">
-            <div class="card-header">
-              <ul class="nav nav-tabs card-header-tabs">
-                <li class="nav-item">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#progate-content">
-                    Progate
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#daytra-content">
-                    デイトラ
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#personal-content">
-                    個人開発
-                  </button>
-                </li>
-              </ul>
-            </div>
-
-            <div class="card-body tab-content">
-              <!-- Progate -->
-              <div id="progate-content" class="tab-pane fade show active">
-                <h5 class="card-title fw-bold">Progate学習</h5>
-                  <img
-                    src="./img/Progate成果.jpg"
-                    alt="Progate成果記録"
-                    class="progate-img img-fluid mx-auto d-block py-3"
-                    style="max-width: 80%; height: auto;"
-                  />
-                <h5 class="card-text fw-bold py-3">独学で基礎固め</h5>
-                <p>
-                  Progateというオンラインプログラミング学習サービスを活用し、HTML、CSS、JavaScript、jQuery、PHP、Ruby、
-                  Ruby on Rails、SQL、Sass、Git、Command Line、Node.jsなど幅広い言語やツールに触れました。
-                  総演習クリア数は620に達し、Web言語やツールの基礎を幅広く学びました。
-                </p>
-              </div>
-
-              <!-- デイトラ -->
-              <div id="daytra-content" class="tab-pane fade">
-                <h5 class="card-title fw-bold">デイトラ学習</h5>
-                <div id="daytra-carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <a href="https://dairytrailisseisweetsite-practice.vercel.app/" target="_blank">
-                        <img src="./img/Cafe LP制作.jpg" alt="カフェLP制作"
-                          class="img-fluid mx-auto d-block py-3" style="max-width: 80%; height: auto;" />
-                      </a>
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>カフェLP制作</h5>
-                        <p>HTML,CSS,JavaScript（jQuery）を使用して簡単なサイトを構築</p>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <a href="https://dairytrail-issei-bootstrap-practice.vercel.app/" target="_blank">
-                        <img src="./img/bootstrapサイト.jpg" alt="Bootstrapサイト"
-                          class="img-fluid mx-auto d-block py-3" style="max-width: 80%; height: auto;" />
-                      </a>
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>Bootstrapサイト</h5>
-                        <p>CSSのフレームワークであるBootstrapを使用して簡単なサイトを構築</p>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <a href="https://blog-app-b72e9e2b357e.herokuapp.com/" target="_blank">
-                        <img src="./img/Blog App.jpg" alt="Blog Appアプリ"
-                          class="img-fluid mx-auto d-block py-3" style="max-width: 80%; height: auto;" />
-                      </a>
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>Blog Appアプリ</h5>
-                        <p>Ruby on Railsを使用して投稿アプリを開発</p>
-                      </div>
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#daytra-carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#daytra-carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                  </button>
-                </div>
-
-                <h5 class="card-text fw-bold py-3">実践的なスキル習得</h5>
-                <p>
-                  デイトラWeb開発コースを通じ、初級編ではHTML/CSSやJavaScriptでの動的ページ制作を習得しました。
-                  <br />中級編ではRuby on RailsとSQLを学び、認証やCRUD機能を備えたWebアプリを開発・デプロイまで実践しました。
-                </p>
-              </div>
-
-             <!-- 個人開発 -->
-            <div id="personal-content" class="tab-pane fade">
-
-              <!-- Accordion -->
-              <div class="accordion mt-4" id="personalAccordion">
-
-                <!-- ===== Accordion Item 1 : Board Todo App ===== -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingBoardTodo">
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseBoardTodo"
-                      aria-expanded="true"
-                      aria-controls="collapseBoardTodo"
-                    >
-                      Board Todo App
-                    </button>
-                  </h2>
-
-                  <div
-                    id="collapseBoardTodo"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingBoardTodo"
-                    data-bs-parent="#personalAccordion"
-                  >
-                    <div class="accordion-body">
-
-                      <h5 class="fw-bold">開発実績：Board Todo App</h5>
-
-                      <p>
-                        <strong>Board Todo App</strong>は、タスク管理をより視覚的・柔軟に行えるように設計したToDoアプリです。<br>
-                        チームや個人での課題管理において「誰がどのタスクを担当しているのか分かりづらい」
-                        という課題を解決するため、<strong>ボード単位でタスクを整理</strong>できる仕組みを導入しました。
-                      </p>
-
-                      <h6 class="fw-bold m-3">主な機能</h6>
-                      <ul>
-                        <li>ユーザー認証（Devise）</li>
-                        <li>Board / Task の1対多リレーション</li>
-                        <li>CRUD機能（作成・編集・削除）</li>
-                        <li>バリデーション</li>
-                        <li>ページネーション</li>
-                        <li>ログインユーザーごとのデータ分離</li>
-                        <li>タスクに期限を設定し、期限の近いものを降順設定（期日に応じて文字色変化）</li>
-                        <li>タスクに優先度を設定し、タスクカードの色分けにて視覚的に優先度把握</li>
-                      </ul>
-
-                      <h6 class="fw-bold m-3">技術スタック</h6>
-                      <ul>
-                        <li>Ruby on Rails</li>
-                        <li>PostgreSQL</li>
-                        <li>Devise</li>
-                        <li>Bootstrap</li>
-                        <li>Heroku</li>
-                        <li>Git / GitHub</li>
-                      </ul>
-
-                      <h6 class="fw-bold m-3">工夫したポイント</h6>
-                      <ul>
-                        <li>Board と Task とComment の関係設計</li>
-                        <li>優先度や緊急度を色分け表示</li>
-                        <li>期限が近いタスクを上に表示</li>
-                        <li>画面幅に応じてボード表示数を調整</li>
-                      </ul>
-
-                      <div class="text-center m-4">
-                        <a
-                          href="https://board-todo-app-613300baa0cf.herokuapp.com"
-                          target="_blank"
-                          class="btn btn-outline-primary"
-                        >
-                          アプリを見る
-                        </a>
-                      </div>
-                      <div class="text-center m-4">
-                        <a
-                          href="https://sheer-dugong-249.notion.site/Board-Todo-App-README-30671756202180b4bb2ad0f8c388ef08"
-                          target="_blank"
-                          class="btn btn-outline-primary"
-                        >
-                          README
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- ===== Accordion Item 2 : CookTube ===== -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingCookTube">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseCookTube"
-                      aria-expanded="false"
-                      aria-controls="collapseCookTube"
-                    >
-                      CookTube
-                    </button>
-                  </h2>
-
-                  <div
-                    id="collapseCookTube"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingCookTube"
-                    data-bs-parent="#personalAccordion"
-                  >
-                    <div class="accordion-body">
-
-                      <h5 class="fw-bold">開発実績：CookTube</h5>
-
-                      <p>
-                        <strong>CookTube</strong>は、YouTube 上の料理ショート動画を <strong>保存・分類・再利用</strong>しやすくすることを目的に開発した Web アプリです。<br>
-                        「後で見返したい料理動画が埋もれてしまう」「フォルダ分けして管理したい」という課題を解決するため、
-                        <strong>動画をカード形式で一覧表示し、フォルダ単位で整理できる仕組み</strong>を実装しました。
-                      </p>
-
-                      <h6 class="fw-bold m-3">主な機能</h6>
-                      <ul>
-                        <li>ユーザー認証（Devise）</li>
-                        <li>YouTube 動画検索機能（API連携）</li>
-                        <li>動画の保存・削除機能</li>
-                        <li>フォルダ作成・編集・削除</li>
-                        <li>動画のフォルダ振り分け（複数フォルダ対応）</li>
-                        <li>未分類動画一覧表示</li>
-                        <li>無限スクロール</li>
-                        <li>動画とフォルダの連携（フォルダ名のタグ付け）</li>
-                        <li>背景イラストのランダム表示演出</li>
-                        <li>ログインユーザーごとのデータ分離</li>
-                      </ul>
-
-                      <h6 class="fw-bold m-3">技術スタック</h6>
-                      <ul>
-                        <li>Ruby on Rails</li>
-                        <li>PostgreSQL</li>
-                        <li>Devise</li>
-                        <li>HTML/CSS</li>
-                        <li>JavaScript</li>
-                        <li>API連携(YouTube Data API v3)</li>
-                        <li>Heroku</li>
-                        <li>Git / GitHub</li>
-                      </ul>
-
-                      <h6 class="fw-bold m-3">工夫したポイント</h6>
-                      <ul>
-                        <li>動画カードを共通partialとして設計し、検索結果やフォルダ内の動画などカードUIを統一</li>
-                        <li>フォルダ × 動画の多対多設計（複数フォルダ対応）</li>
-                        <li>動画が「どのフォルダに入っているか」一目で分かるタグ表示</li>
-                        <li>レスポンシブを意識したグリッド設計（PC：3列表示、スマホ：1列表示）</li>
-                        <li>背景イラストによる体験的な演出（料理イラストのランダム表示、スマホでは非表示）</li>
-                      </ul>
-
-                      <h6 class="fw-bold m-3">閲覧用ユーザー</h6>
-                        <ul>
-                          <li>メールアドレス：test@gmail.com</li>
-                          <li>パスワード：password</li>
-                        </ul>
-
-                      <div class="text-center m-4">
-                        <a
-                          href="https://cooktube-app-production-is01-6841de98450c.herokuapp.com/"
-                          target="_blank"
-                          class="btn btn-outline-primary"
-                        >
-                          アプリを見る
-                        </a>
-                      </div>
-                      <div class="text-center m-4">
-                        <a
-                          href="https://sheer-dugong-249.notion.site/CookTube-2fb7175620218063a25ad2bf29dd5747"
-                          target="_blank"
-                          class="btn btn-outline-primary"
-                        >
-                          README
-                        </a>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-        </section>
-
-
-    <!-- 連絡先 -->
-    <section class="contact" id="Contact">
-      <div class="container py-5">
-        <h1 class="text-center fw-bold py-3 bg-dark text-white">Contact</h1>
-        <h2 class="text-center py-4">連絡先</h2>
-        <ul class="contact-nav-list">
-          <li class="contact-nav-item">
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=proteinebimayoduu@gmail.com"
-              class="contact-nav-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="sns-icon"
-              >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                ></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              <p class="contact-nav-link-text display-">
-                Gmail : proteinebimayoduu@gmail.com
-              </p>
-            </a>
+        <ul class="nav nav-tabs mb-4" id="learningTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#progate" role="tab">Progate</button>
           </li>
-          <li class="contact-nav-item">
-            <a href="https://github.com/Issei-0623" class="contact-nav-link" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="sns-icon bi bi-github" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38
-                0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                0-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
-                0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1
-                0 0 .67-.21 2.2.82a7.55 7.55 0 0 1 4 0c1.53-1.04 2.2-.82
-                2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15
-                0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                0 1.07-.01 1.93-.01 2.2 0 .21.15.45.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-              </svg>
-              GitHub : Issei-0623
-            </a>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#daytra" role="tab">デイトラ</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#personal" role="tab">個人開発</button>
           </li>
         </ul>
+
+        <div class="tab-content">
+
+          <!-- Progate -->
+          <div class="tab-pane fade show active" id="progate" role="tabpanel">
+            <div class="row align-items-center g-4">
+              <div class="col-md-5 text-center">
+                <img src="./img/Progate成果.jpg" alt="Progate成果" class="img-fluid rounded-3 shadow-sm" />
+              </div>
+              <div class="col-md-7">
+                <h4 class="mb-3">Progate で独学の基礎固め</h4>
+                <p class="text-body-secondary">HTML・CSS・JavaScript・jQuery・PHP・Ruby・Ruby on Rails・SQL・Sass・Git・Command Line・Node.js など幅広い言語やツールに触れました。</p>
+                <div class="stat-badge">
+                  <span class="stat-number">620</span>
+                  <span class="stat-label">演習クリア数</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- デイトラ -->
+          <div class="tab-pane fade" id="daytra" role="tabpanel">
+            <div class="row g-4">
+              <div class="col-md-12">
+                <h4 class="mb-2">デイトラ Web開発コース</h4>
+                <p class="text-body-secondary mb-3">
+                  <strong>初級編</strong>では HTML・CSS・JavaScript を使い、カフェのランディングページ制作を通じてWebサイト構築の基礎を習得。<br>
+                  <strong>中級編</strong>では Ruby on Rails・SQL を学びながら実際にWebアプリを開発し、Devise による認証機能や CRUD 機能を実装。<br>
+                  <strong>上級編</strong>では Ajax を用いた非同期通信・Sidekiq による非同期処理・RSpec（request spec / system spec）でのテスト・セキュリティ対策まで取り組み、デプロイまで一通りの開発フローを実践しました。
+                </p>
+                <div class="daytra-skills mb-4">
+                  <span class="tech-tag">HTML / CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Ruby on Rails</span>
+                  <span class="tech-tag">SQL</span>
+                  <span class="tech-tag">Devise</span>
+                  <span class="tech-tag">Ajax</span>
+                  <span class="tech-tag">Sidekiq</span>
+                  <span class="tech-tag">RSpec</span>
+                  <span class="tech-tag">セキュリティ</span>
+                </div>
+                <div class="works-row mb-5">
+                  <a href="https://dairytrailisseisweetsite-practice.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-card-sm">
+                    <img src="./img/CafeLP.jpg" alt="カフェLP制作" />
+                    <div class="work-card-sm-body">
+                      <h6>カフェLP制作</h6>
+                      <p>HTML / CSS / JavaScript (jQuery)</p>
+                    </div>
+                  </a>
+
+                  <a href="https://blog-app-b72e9e2b357e.herokuapp.com/" target="_blank" rel="noopener noreferrer" class="work-card-sm">
+                    <img src="./img/BlogApp_top.png" alt="Blog App" class="img-contain" />
+                    <div class="work-card-sm-body">
+                      <h6>Blog App</h6>
+                      <p>Ruby on Rails</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Photogram（最終課題） -->
+              <div class="col-md-12">
+                <div class="daytra-final-label">最終課題</div>
+                <div class="photogram-card">
+                  <div class="photogram-gallery">
+                    <div class="photogram-gallery-main">
+                      <img id="photogramMain" src="./img/Photogram.jpg" alt="ログイン画面" />
+                    </div>
+                    <div class="photogram-gallery-thumbs">
+                      <img src="./img/Photogram.jpg" alt="ログイン画面" class="photogram-thumb active" />
+                      <img src="./img/Photogram_feed.png" alt="フィード画面" class="photogram-thumb" />
+                      <img src="./img/Photogram_detail.png" alt="投稿詳細画面" class="photogram-thumb" />
+                      <img src="./img/Photogram_profile.png" alt="プロフィール画面" class="photogram-thumb" />
+                    </div>
+                  </div>
+                  <div class="photogram-card-body">
+                    <h4 class="mb-1">Photogram</h4>
+                    <p class="text-body-secondary mb-3">Instagram のような写真共有 Web アプリ。ユーザー認証・プロフィール画像変更・複数枚写真投稿・Hotwire Turbo によるいいね＆コメント・メール通知・フォロー・タイムライン機能を実装。本番環境は AWS S3・Kamal でデプロイし、model / request / system spec でテストも作成しました。開発の過程は Zenn に記事として公開しています。</p>
+                    <div class="tech-tags mb-3">
+                      <span class="tech-tag">Ruby on Rails</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Hotwire / Turbo</span>
+                      <span class="tech-tag">Stimulus</span>
+                      <span class="tech-tag">AWS S3</span>
+                      <span class="tech-tag">Kamal</span>
+                      <span class="tech-tag">RSpec</span>
+                      <span class="tech-tag">Sidekiq</span>
+                      <span class="tech-tag">Devise</span>
+                      <span class="tech-tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                      <a href="https://photogram-production-is01-247eccd5b4b6.herokuapp.com/" target="_blank" rel="noopener noreferrer" class="btn-project">アプリを見る</a>
+                      <a href="https://zenn.dev/issei_0623" target="_blank" rel="noopener noreferrer" class="btn-project-outline">開発記事（Zenn）</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 個人開発 -->
+          <div class="tab-pane fade" id="personal" role="tabpanel">
+            <div class="row g-4">
+
+              <!-- Board Todo App -->
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-card-header">
+                    <h4>Board Todo App</h4>
+                  </div>
+                  <div class="project-card-body">
+                    <p>タスク管理をより視覚的・柔軟に行えるボード型ToDoアプリ。優先度や期限による色分け、ボード単位での整理ができます。</p>
+                    <div class="tech-tags">
+                      <span class="tech-tag">Ruby on Rails</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Devise</span>
+                      <span class="tech-tag">Hotwire / Turbo</span>
+                      <span class="tech-tag">Stimulus</span>
+                      <span class="tech-tag">Haml</span>
+                      <span class="tech-tag">AWS S3</span>
+                      <span class="tech-tag">Kamal</span>
+                      <span class="tech-tag">Capybara</span>
+                      <span class="tech-tag">RuboCop</span>
+                    </div>
+                    <h6 class="mt-3 mb-2">主な機能</h6>
+                    <ul class="feature-list">
+                      <li>ユーザー認証（Devise）</li>
+                      <li>Board / Task の1対多リレーション</li>
+                      <li>CRUD・バリデーション・ページネーション</li>
+                      <li>期限・優先度による色分け表示</li>
+                      <li>ログインユーザーごとのデータ分離</li>
+                    </ul>
+                    <div class="project-links mt-3">
+                      <a href="https://board-todo-app-613300baa0cf.herokuapp.com" target="_blank" rel="noopener noreferrer" class="btn-project">アプリを見る</a>
+                      <a href="https://sheer-dugong-249.notion.site/Board-Todo-App-README-30671756202180b4bb2ad0f8c388ef08" target="_blank" rel="noopener noreferrer" class="btn-project-outline">README</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CookTube -->
+              <div class="col-md-6">
+                <div class="project-card">
+                  <div class="project-card-header">
+                    <h4>CookTube</h4>
+                  </div>
+                  <div class="project-card-body">
+                    <p>YouTubeの料理ショート動画を保存・フォルダ分類・管理するWebアプリ。YouTube APIと連携し、動画を検索・保存できます。</p>
+                    <div class="tech-tags">
+                      <span class="tech-tag">Ruby on Rails</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Devise</span>
+                      <span class="tech-tag">YouTube Data API</span>
+                      <span class="tech-tag">Hotwire / Turbo</span>
+                      <span class="tech-tag">Stimulus</span>
+                      <span class="tech-tag">AWS S3</span>
+                      <span class="tech-tag">Kamal</span>
+                      <span class="tech-tag">Capybara</span>
+                      <span class="tech-tag">RuboCop</span>
+                    </div>
+                    <h6 class="mt-3 mb-2">主な機能</h6>
+                    <ul class="feature-list">
+                      <li>YouTube動画検索・保存（API連携）</li>
+                      <li>フォルダ作成・複数フォルダ対応</li>
+                      <li>無限スクロール（独自 JS 実装）</li>
+                      <li>背景イラストのランダム演出</li>
+                      <li>ログインユーザーごとのデータ分離</li>
+                    </ul>
+                    <p class="mt-2 small text-body-secondary">閲覧用ユーザー：test@gmail.com / password</p>
+                    <div class="project-links mt-3">
+                      <a href="https://cooktube-app-production-is01-6841de98450c.herokuapp.com/" target="_blank" rel="noopener noreferrer" class="btn-project">アプリを見る</a>
+                      <a href="https://sheer-dugong-249.notion.site/CookTube-2fb7175620218063a25ad2bf29dd5747" target="_blank" rel="noopener noreferrer" class="btn-project-outline">README</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <section class="footer border-top border-secondary text-center p-1">
-      <div class="footer-copy-wrapper">
-        <small class="footer-copylight">&copy;Issei Saito</small>
+    <!-- Contact -->
+    <section id="contact" class="section-padding bg-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">連絡先</p>
+        </div>
+        <div class="contact-links">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=proteinebimayoduu@gmail.com" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>proteinebimayoduu@gmail.com</span>
+          </a>
+          <a href="https://github.com/Issei-0623" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82a7.55 7.55 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.45.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            <span>GitHub : Issei-0623</span>
+          </a>
+          <a href="https://zenn.dev/issei_0623" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M.264 23.771h4.984c.264 0 .498-.147.645-.352L19.614.874c.176-.293-.029-.674-.381-.674H14.44a.822.822 0 0 0-.703.41L.03 23.361c-.088.176-.029.41.234.41zM17.445 23.419l6.479-10.408c.205-.323-.029-.733-.41-.733h-4.777c-.234 0-.44.117-.557.323l-6.391 10.408c-.176.264.029.674.41.674h4.191a.848.848 0 0 0 .704-.352-.088.176.029.41z"/>
+            </svg>
+            <span>Zenn : issei_0623</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- TOPボタン -->
-    <p id="page-top"><a href="#wrap">TOP</a></p>
+    <!-- フッター -->
+    <footer class="site-footer">
+      <p>&copy; Issei Saito</p>
+    </footer>
 
-    <!-- メニューの拡大画像 -->
-    <div class="progate-modal">
-      <img src="./img/Progate成果.jpg" alt="" class="progate-bigimg" />
-    </div>
+    <!-- トップへ戻るボタン -->
+    <a href="#hero" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">↑</a>
 
-    <!-- javaScript導入 -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous">
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
   </body>
 </html>
